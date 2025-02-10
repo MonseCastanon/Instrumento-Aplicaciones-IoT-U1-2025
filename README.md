@@ -41,7 +41,7 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 url del archivo .json 
 
 Codigo Documentado
-📎 🔗 url del código Tonhy - 
+📎 [🔗 url del código Thonny]() 
 
 📎 [🔗 Enlace al Ejercicio](https://drive.google.com/drive/folders/1JnLFcRFwHqVU8haljCm9o4Cvo7aa4LZl?usp=sharing)
 
@@ -54,10 +54,12 @@ Codigo Documentado
 ---
 
 #### 🎥 **Videos Demostrativos (Individual)**
-1. CRUD en PostgreSQL con Node-RED o Python (2.5 puntos)  
-2. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)  
-3. Control de LED y Botón en Raspberry Pi (2.5 puntos)  
-4. Conexión MQTT en Node-RED con Mosquitto (2.5 puntos)  
+1. CRUD en PostgreSQL con Node-RED o Python (2.5 puntos)
+   [CRUD DE Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json)
+3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)  
+4. Control de LED y Botón en Raspberry Pi (2.5 puntos)
+   [🎥 Video demostrativo](https://drive.google.com/file/d/1pj94mMCNZgYiWjhxJjdGmIEt50mw10tG/view?usp=drive_link)
+6. Conexión MQTT en Node-RED con Mosquitto (2.5 puntos)  
 
 ✅ **Evidencias:**  
 | Integrante | Evaluación Cisco |
