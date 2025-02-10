@@ -55,10 +55,10 @@ Codigo Documentado
 
 #### 🎥 **Videos Demostrativos (Individual)**
 1. CRUD en PostgreSQL con Node-RED o Python (2.5 puntos)
-   [CRUD DE Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json)
+[CRUD DE Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json)
 3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)  
 4. Control de LED y Botón en Raspberry Pi (2.5 puntos)
-   [🎥 Video demostrativo](https://drive.google.com/file/d/1pj94mMCNZgYiWjhxJjdGmIEt50mw10tG/view?usp=drive_link)
+[🎥 Video demostrativo](https://drive.google.com/file/d/1pj94mMCNZgYiWjhxJjdGmIEt50mw10tG/view?usp=drive_link)
 6. Conexión MQTT en Node-RED con Mosquitto (2.5 puntos)  
 
 ✅ **Evidencias:**  
