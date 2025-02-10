@@ -55,7 +55,7 @@ Codigo Documentado
 
 #### 🎥 **Videos Demostrativos (Individual)**
 1. CRUD en PostgreSQL con Node-RED o Python (2.5 puntos)
-[CRUD DE Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json)
+[CRUD de Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json)
 3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)  
 4. Control de LED y Botón en Raspberry Pi (2.5 puntos)
 [🎥 Video demostrativo](https://drive.google.com/file/d/1pj94mMCNZgYiWjhxJjdGmIEt50mw10tG/view?usp=drive_link)
@@ -64,8 +64,8 @@ Codigo Documentado
 ✅ **Evidencias:**  
 | Integrante | Evaluación Cisco |
 |-------------|------------------|
-| **Monserrat Guadalupe Castañon Sánchez** | [📁 Drive](https://drive.google.com/drive/folders/1vB3tWRWw8eRMSLwjO5PWPB1Z1qMOLKNb?usp=sharing) |
-| **Delgado Manzano Carmen Catalina** | [📁 Drive](https://drive.google.com/drive/folders/1vB3tWRWw8eRMSLwjO5PWPB1Z1qMOLKNb?usp=sharing) |
+| **Monserrat Guadalupe Castañon Sánchez** | [📁 Drive](https://drive.google.com/drive/folders/1rikuzTonF8nlRl7e7wIamOKiwZRx4-VM?usp=sharing) |
+| **Delgado Manzano Carmen Catalina** | [📁 Drive](aquí el link de la carpeta) |
 
 ---
 
@@ -77,8 +77,8 @@ Codigo Documentado
 ✅ **Evidencias:**  
 | Integrante | Componente | Imagen |
 |--------------|--------------|--------|
-| **Monserrat Guadalupe Castañon Sánchez** | Placa Fenólica | ![Placa Fenólica](https://github.com/user-attachments/assets/ec6b9e9a-03b5-4001-af4c-5e5eeb8fce43) |
-| **Delgado Manzano Carmen Catalina** | ... | ... |
+| **Monserrat Guadalupe Castañon Sánchez** | Placa Fenólica | <img src="https://github.com/user-attachments/assets/ec6b9e9a-03b5-4001-af4c-5e5eeb8fce43" width="100"> |
+| **Delgado Manzano Carmen Catalina** | Placa Fenólica | ... |
 
 ---
 
