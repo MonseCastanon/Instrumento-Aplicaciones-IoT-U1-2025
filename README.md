@@ -41,9 +41,10 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 url del archivo .json 
 
 Codigo Documentado
-📎 [🔗 url del código Thonny]() 
 
-📎 [🔗 Enlace al Ejercicio](https://drive.google.com/drive/folders/1JnLFcRFwHqVU8haljCm9o4Cvo7aa4LZl?usp=sharing)
+📎 [🔗 Código de Thonny](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/C%C3%B3gido%20de%20Thonny.py) 
+
+📎 [🔗 Enlace de Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json )
 
 ---
 
@@ -88,7 +89,7 @@ Codigo Documentado
 ✅ **Evidencias:**  
 | Integrante | Figura | Imagen |
 |--------------|--------|--------|
-| **Monserrat Guadalupe Castañon Sánchez** | Bailarina | ![Bailarina](https://github.com/user-attachments/assets/9b531730-822b-45ac-a679-d0506dba5f3b) |
+| **Monserrat Guadalupe Castañon Sánchez** | Bailarina | <img src="https://github.com/user-attachments/assets/e1276cc8-70cc-48e5-b6c0-a93527710d70" width="100"> |
 | **Delgado Manzano Carmen Catalina** | ... | ... |
 
 ---
