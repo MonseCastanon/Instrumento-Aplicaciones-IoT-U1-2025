@@ -1,0 +1,653 @@
+[
+    {
+        "id": "f9b6d46158a48420",
+        "type": "tab",
+        "label": "BD_POSTGRES_CRUD",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9df9c1933438c01f",
+        "type": "http in",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "url": "/sensors/update",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 260,
+        "wires": [
+            [
+                "0183e8711de56a85"
+            ]
+        ]
+    },
+    {
+        "id": "c5da81ece92cd9b4",
+        "type": "http in",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "url": "/sensors/insert",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 320,
+        "wires": [
+            [
+                "a49ef639e0c5db91"
+            ]
+        ]
+    },
+    {
+        "id": "ac55cf4962fb83ff",
+        "type": "http in",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "url": "/sensors/delete",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 380,
+        "wires": [
+            [
+                "7cba9cc9885d8f12"
+            ]
+        ]
+    },
+    {
+        "id": "a57c080314d509ca",
+        "type": "template",
+        "z": "f9b6d46158a48420",
+        "name": "Web Template",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en-GB\">\n<head>\n    <title>Users</title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css\" />\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css\" />\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css\" />\n    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js\"></script>\n\n    <script type=\"text/javascript\">\n    $(function () {\n        console.log(\"Users Data Crud\");\n\n        var db = {{#payload}}{{{.}}}{{/payload}};\n\n        // Cargar usuarios al iniciar la página\n        var userOptions = [];\n\n        $.get(\"/sensors/get-users\", function(users) {\n            // Mapear los usuarios para obtener un array de objetos {value, text}\n            var userOptions = users.map(function(user) {\n                return { id: user.id, name: user.username };\n            });\n            console.log(userOptions);\n            // Agregar los usuarios al combo\n            $(\"#jsgrid\").jsGrid(\"fieldOption\", \"user_id\", \"items\", userOptions);\n        });\n\n    \n        $(\"#jsgrid\").jsGrid({\n            width: \"100%\",\n            inserting: true,\n            editing: true,\n            sorting: true,\n            paging: true,\n\n            data: db,\n\n            fields: [\n                { title:\"ID\", name: \"id\", type: \"text\", width: 50 },\n                { title:\"Sensor Type\", name: \"sensor_type\", type: \"text\", width: 50 },\n                { title:\"Location\", name: \"location\", type: \"text\", width: 50 },\n                { title:\"Installation Date\", name: \"installation_date\", type:\"text\", width: 25},\n                { title:\"User\", name: \"user_id\", type: \"select\", items: userOptions,  valueField: \"id\", textField: \"name\", width: 50},\n                { type: \"control\" }\n            ],\n\n            controller: {\n                insertItem: function(item) {\n                    return $.ajax({\n                        type: \"POST\",\n                        url: \"/sensors/insert\",\n                        data: item\n                    });\n                },\n                updateItem: function(item) {\n                   return $.ajax({\n                        type: \"PUT\",\n                        url: \"/sensors/update\",\n                        data: item\n                    });\n                },\n                deleteItem: function(item) {\n                    return $.ajax({\n                        type: \"DELETE\",\n                        url: \"/sensors/delete\",\n                        data: item\n                    });\n                }\n            }   \n        });\n    \n    \n    \n    \n    \n});\n</script>\n</head>\n<body class=\"container\">\n     <section class=\"row\">\n        \n        <div class=\"col-md-6\"></div>\n        <div class=\"col-md-6\" id=\"jsgrid\">\n        </div>\n    </section>\n</body>\n</html>\n",
+        "x": 780,
+        "y": 200,
+        "wires": [
+            [
+                "d8913a06857bb88b"
+            ]
+        ]
+    },
+    {
+        "id": "88be20b7535b096b",
+        "type": "http in",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "url": "/sensors/index",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 200,
+        "wires": [
+            [
+                "a3a6f8622ec66d71"
+            ]
+        ]
+    },
+    {
+        "id": "d8913a06857bb88b",
+        "type": "http response",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 970,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "8a3d6bb64b0411f4",
+        "type": "json",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 550,
+        "y": 200,
+        "wires": [
+            [
+                "a57c080314d509ca"
+            ]
+        ]
+    },
+    {
+        "id": "a3a6f8622ec66d71",
+        "type": "postgresql",
+        "z": "f9b6d46158a48420",
+        "name": "SELECT sensors",
+        "query": "SELECT sensors.*, users.id AS user_id, users.username \nFROM sensors \nLEFT JOIN users ON sensors.user_id = users.id;\n",
+        "postgreSQLConfig": "3cd515a78cadaa56",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 350,
+        "y": 200,
+        "wires": [
+            [
+                "8a3d6bb64b0411f4"
+            ]
+        ]
+    },
+    {
+        "id": "0183e8711de56a85",
+        "type": "postgresql",
+        "z": "f9b6d46158a48420",
+        "name": "UPDATE sensors",
+        "query": "UPDATE sensors SET sensor_type = '{{{msg.payload.sensor_type}}}',\n                    location =  '{{{msg.payload.location}}}',\n                    user_id =  '{{{msg.payload.user_id}}}' \n            WHERE id = {{{msg.payload.id}}};",
+        "postgreSQLConfig": "3cd515a78cadaa56",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "dbd38d61b1c83325"
+            ]
+        ]
+    },
+    {
+        "id": "a49ef639e0c5db91",
+        "type": "postgresql",
+        "z": "f9b6d46158a48420",
+        "name": "INSERT sensors",
+        "query": "INSERT INTO sensors (sensor_type, location, user_id) VALUES ('{{{msg.payload.sensor_type}}}','{{{msg.payload.location}}}', {{{msg.payload.user_id}}});\n",
+        "postgreSQLConfig": "3cd515a78cadaa56",
+        "split": true,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 340,
+        "y": 320,
+        "wires": [
+            [
+                "46cd07b87fe5c546"
+            ]
+        ]
+    },
+    {
+        "id": "7cba9cc9885d8f12",
+        "type": "postgresql",
+        "z": "f9b6d46158a48420",
+        "name": "DELETE sensors",
+        "query": "DELETE FROM sensors WHERE id = {{{msg.payload.id}}};",
+        "postgreSQLConfig": "3cd515a78cadaa56",
+        "split": true,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 350,
+        "y": 380,
+        "wires": [
+            [
+                "dbd38d61b1c83325"
+            ]
+        ]
+    },
+    {
+        "id": "f54234d43b376953",
+        "type": "function",
+        "z": "f9b6d46158a48420",
+        "name": "showSaved",
+        "func": "var item = {\n    id: msg.payload[0].id,\n    location: msg.payload[0].location,\n    installation_date: msg.payload[0].installation_date,\n    sensor_type: msg.payload[0].sensor_type,\n    user_id: msg.payload[0].user_id\n};\n\nif (item.sensor_type === \"\" || item.location === \"\" || item.installation_date === \"\" || item.id === \"\" || item.User === \"\") {\n    msg.statusCode = 400;\n    msg.payload = null;\n    return msg;\n}\n\nmsg.payload = item;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 360,
+        "wires": [
+            [
+                "d8913a06857bb88b"
+            ]
+        ]
+    },
+    {
+        "id": "46cd07b87fe5c546",
+        "type": "postgresql",
+        "z": "f9b6d46158a48420",
+        "name": "SELECT MAX sensors",
+        "query": "SELECT sensors.*, users.username\nFROM sensors\nJOIN users ON sensors.user_id = users.id\nWHERE sensors.id = (SELECT MAX(id) FROM sensors);",
+        "postgreSQLConfig": "3cd515a78cadaa56",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 580,
+        "y": 320,
+        "wires": [
+            [
+                "f54234d43b376953"
+            ]
+        ]
+    },
+    {
+        "id": "dbd38d61b1c83325",
+        "type": "function",
+        "z": "f9b6d46158a48420",
+        "name": "reload",
+        "func": "msg.payload = msg.result;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 280,
+        "wires": [
+            [
+                "d8913a06857bb88b"
+            ]
+        ]
+    },
+    {
+        "id": "b765aa5b8266b06f",
+        "type": "http in",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "url": "/sensors/get-users",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "949a044601fbd12f"
+            ]
+        ]
+    },
+    {
+        "id": "949a044601fbd12f",
+        "type": "postgresql",
+        "z": "f9b6d46158a48420",
+        "name": "SELECT users",
+        "query": "SELECT * FROM users;",
+        "postgreSQLConfig": "3cd515a78cadaa56",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "04ebdd933aacf737"
+            ]
+        ]
+    },
+    {
+        "id": "04ebdd933aacf737",
+        "type": "http response",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "93b9d46682604489",
+        "type": "http in",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "url": "/users/update",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 540,
+        "wires": [
+            [
+                "7e0e1478f869361c"
+            ]
+        ]
+    },
+    {
+        "id": "157381549d8e7bbf",
+        "type": "http in",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "url": "/users/insert",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 600,
+        "wires": [
+            [
+                "9fb992cd343f2cb4"
+            ]
+        ]
+    },
+    {
+        "id": "e94b272a2e3e0914",
+        "type": "http in",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "url": "/users/delete",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 660,
+        "wires": [
+            [
+                "6e33e6ab3a7ca8e6"
+            ]
+        ]
+    },
+    {
+        "id": "f1f37eaaaa829eb5",
+        "type": "template",
+        "z": "f9b6d46158a48420",
+        "name": "Web Template",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en-GB\">\n<head>\n    <title>Users</title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css\" />\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css\" />\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css\" />\n    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js\"></script>\n\n    <script type=\"text/javascript\">\n    $(function () {\n        console.log(\"Users Data Crud\");\n\n        var db = {{#payload}}{{{.}}}{{/payload}};\n\n        // Cargar usuarios al iniciar la página\n    \n        $(\"#jsgrid\").jsGrid({\n            width: \"100%\",\n            inserting: true,\n            editing: true,\n            sorting: true,\n            paging: true,\n\n            data: db,\n\n            fields: [\n                { title:\"ID\", name: \"id\", type: \"text\", width: 50 ,readOnly:true},\n                { title:\"Email\", name: \"email\", type: \"text\", width: 50 },\n                { title:\"Password\", name: \"password\", type: \"text\", width: 50 },\n                { title:\"Record at\", name: \"record_at\", type:\"text\", width: 25,readOnly:true},\n                { type: \"control\" }\n            ],\n\n            controller: {\n                insertItem: function(item) {\n                    return $.ajax({\n                        type: \"POST\",\n                        url: \"/users/insert\",\n                        data: item\n                    });\n                },\n                updateItem: function(item) {\n                   return $.ajax({\n                        type: \"PUT\",\n                        url: \"/users/update\",\n                        data: item\n                    });\n                },\n                deleteItem: function(item) {\n                    return $.ajax({\n                        type: \"DELETE\",\n                        url: \"/users/delete\",\n                        data: item\n                    });\n                }\n            }   \n        });\n    \n    \n    \n    \n    \n});\n</script>\n</head>\n<body class=\"container\">\n     <section class=\"row\">\n        \n        <div class=\"col-md-6\"></div>\n        <div class=\"col-md-6\" id=\"jsgrid\">\n        </div>\n    </section>\n</body>\n</html>\n",
+        "x": 760,
+        "y": 480,
+        "wires": [
+            [
+                "6ed23d9636a97339"
+            ]
+        ]
+    },
+    {
+        "id": "0fe58940d1d0ab8e",
+        "type": "http in",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "url": "/users/index",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 480,
+        "wires": [
+            [
+                "144167944e609062"
+            ]
+        ]
+    },
+    {
+        "id": "6ed23d9636a97339",
+        "type": "http response",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 950,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "72ddee0e49ad99a3",
+        "type": "json",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 530,
+        "y": 420,
+        "wires": [
+            [
+                "f1f37eaaaa829eb5"
+            ]
+        ]
+    },
+    {
+        "id": "144167944e609062",
+        "type": "postgresql",
+        "z": "f9b6d46158a48420",
+        "name": "SELECT users",
+        "query": "SELECT * FROM users;",
+        "postgreSQLConfig": "3cd515a78cadaa56",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 320,
+        "y": 480,
+        "wires": [
+            [
+                "72ddee0e49ad99a3"
+            ]
+        ]
+    },
+    {
+        "id": "7e0e1478f869361c",
+        "type": "postgresql",
+        "z": "f9b6d46158a48420",
+        "name": "UPDATE users",
+        "query": "UPDATE users SET email = '{{{msg.payload.email}}}',\n                    password = encriptar_contrasena  ('{{{msg.payload.email}}}')\n            WHERE id = {{{msg.payload.id}}};",
+        "postgreSQLConfig": "3cd515a78cadaa56",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 320,
+        "y": 540,
+        "wires": [
+            [
+                "de282dadb1a7bfe1"
+            ]
+        ]
+    },
+    {
+        "id": "9fb992cd343f2cb4",
+        "type": "postgresql",
+        "z": "f9b6d46158a48420",
+        "name": "INSERT users",
+        "query": "INSERT INTO users (email, password) VALUES ('{{{msg.payload.email}}}',encriptar_contrasena('{{{msg.payload.password}}}'));\n",
+        "postgreSQLConfig": "3cd515a78cadaa56",
+        "split": true,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 320,
+        "y": 600,
+        "wires": [
+            [
+                "34d4d0c82f7301f1",
+                "58257ccbba050231"
+            ]
+        ]
+    },
+    {
+        "id": "6e33e6ab3a7ca8e6",
+        "type": "postgresql",
+        "z": "f9b6d46158a48420",
+        "name": "DELETE users",
+        "query": "DELETE FROM users WHERE id = {{{msg.payload.id}}};",
+        "postgreSQLConfig": "3cd515a78cadaa56",
+        "split": true,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 320,
+        "y": 660,
+        "wires": [
+            [
+                "de282dadb1a7bfe1"
+            ]
+        ]
+    },
+    {
+        "id": "b627898011020fa4",
+        "type": "function",
+        "z": "f9b6d46158a48420",
+        "name": "showSaved",
+        "func": "var item = {\n    id: msg.payload[0].id,\n    email: msg.payload[0].email,\n    password: msg.payload[0].password,\n    record_at: msg.payload[0].record_at\n};\n\nif (item.password === \"\" || item.email === \"\" || item.record_at === \"\" || item.id === \"\") {\n    msg.statusCode = 400;\n    msg.payload = null;\n    return msg;\n}\n\nmsg.payload = item;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 600,
+        "wires": [
+            [
+                "6ed23d9636a97339"
+            ]
+        ]
+    },
+    {
+        "id": "34d4d0c82f7301f1",
+        "type": "postgresql",
+        "z": "f9b6d46158a48420",
+        "name": "SELECT MAX users",
+        "query": "SELECT *\nFROM users \nWHERE id = (SELECT MAX(id) FROM users);",
+        "postgreSQLConfig": "3cd515a78cadaa56",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 520,
+        "y": 580,
+        "wires": [
+            [
+                "b627898011020fa4"
+            ]
+        ]
+    },
+    {
+        "id": "de282dadb1a7bfe1",
+        "type": "function",
+        "z": "f9b6d46158a48420",
+        "name": "reload",
+        "func": "msg.payload = msg.result;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 540,
+        "wires": [
+            [
+                "6ed23d9636a97339"
+            ]
+        ]
+    },
+    {
+        "id": "58257ccbba050231",
+        "type": "debug",
+        "z": "f9b6d46158a48420",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "62db40dff51fc394",
+        "type": "mqtt in",
+        "z": "f9b6d46158a48420",
+        "name": "",
+        "topic": "mgcs/sensor",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c2b31fb015c410f5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 40,
+        "wires": [
+            [
+                "621cdbea074cbd4b"
+            ]
+        ]
+    },
+    {
+        "id": "621cdbea074cbd4b",
+        "type": "postgresql",
+        "z": "f9b6d46158a48420",
+        "name": "INSERT sensors",
+        "query": "INSERT INTO sensor_details (sensor_id, user_id, value) VALUES (1,1,'{{{msg.payload}}}');\n",
+        "postgreSQLConfig": "3cd515a78cadaa56",
+        "split": true,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 390,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3cd515a78cadaa56",
+        "type": "postgreSQLConfig",
+        "name": "aiot",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "aiot",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "utng",
+        "userFieldType": "str",
+        "password": "1234",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "c2b31fb015c410f5",
+        "type": "mqtt-broker",
+        "name": "mgcs",
+        "broker": "192.168.188.212",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
