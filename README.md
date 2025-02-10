@@ -3,7 +3,8 @@
 ### 📌 **Autores**
 | Nombre | Número de Control | Grupo |
 |--------------|----------------|--------|
-| **Monserrat Guadalupe Castañon Sánchez** | *1223100390* | *GDS0653* |
+| **Castañon Sánche Monserrat Guadalupe** | *1223100390* | *GDS0653* |
+| **Delgado Manzano Carmen Catalina** | *1223100422* | *GDS0653* |
 
 📅 **Fecha de Entrega:** *10/02/2025*
 
@@ -26,7 +27,8 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 #### 📝 **Evidencias:**  
 | Integrante | Evaluación Cisco |
 |--------------|-----------------|
-| Monserrat Guadalupe Castañon Sánchez | *Pendiente* |
+| **Castañon Sánche Monserrat Guadalupe** |  |
+| **Delgado Manzano Carmen Catalina** |  |
 
 ---
 
@@ -53,7 +55,8 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 ✅ **Evidencias:**  
 | Integrante | Evaluación Cisco |
 |-------------|------------------|
-| Monserrat Guadalupe Castañon Sánchez | [📁 Drive](https://drive.google.com/drive/folders/1vB3tWRWw8eRMSLwjO5PWPB1Z1qMOLKNb?usp=sharing) |
+| **Monserrat Guadalupe Castañon Sánchez** | [📁 Drive](https://drive.google.com/drive/folders/1vB3tWRWw8eRMSLwjO5PWPB1Z1qMOLKNb?usp=sharing) |
+| **Delgado Manzano Carmen Catalina** | [📁 Drive](https://drive.google.com/drive/folders/1vB3tWRWw8eRMSLwjO5PWPB1Z1qMOLKNb?usp=sharing) |
 
 ---
 
@@ -65,7 +68,8 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 ✅ **Evidencias:**  
 | Integrante | Componente | Imagen |
 |--------------|--------------|--------|
-| Monserrat Guadalupe Castañon Sánchez | Placa Fenólica | ![Placa Fenólica](https://github.com/user-attachments/assets/ec6b9e9a-03b5-4001-af4c-5e5eeb8fce43) |
+| **Monserrat Guadalupe Castañon Sánchez** | Placa Fenólica | ![Placa Fenólica](https://github.com/user-attachments/assets/ec6b9e9a-03b5-4001-af4c-5e5eeb8fce43) |
+| **Delgado Manzano Carmen Catalina** | ... | ... |
 
 ---
 
@@ -75,7 +79,8 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 ✅ **Evidencias:**  
 | Integrante | Figura | Imagen |
 |--------------|--------|--------|
-| Monserrat Guadalupe Castañon Sánchez | Bailarina | ![Bailarina](https://github.com/user-attachments/assets/9b531730-822b-45ac-a679-d0506dba5f3b) |
+| **Monserrat Guadalupe Castañon Sánchez** | Bailarina | ![Bailarina](https://github.com/user-attachments/assets/9b531730-822b-45ac-a679-d0506dba5f3b) |
+| **Delgado Manzano Carmen Catalina** | ... | ... |
 
 ---
 
