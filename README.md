@@ -36,6 +36,13 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 
 #### 💾 *Ejercicio 1: Almacenamiento de Datos*
 📌 Diseñar un sistema IoT que capture datos desde un sensor y los almacene en PostgreSQL mediante Node-RED.  
+
+## Video demostrativo  
+url del archivo .json 
+
+Codigo Documentado
+📎 🔗 url del código Tonhy - 
+
 📎 [🔗 Enlace al Ejercicio](https://drive.google.com/drive/folders/1JnLFcRFwHqVU8haljCm9o4Cvo7aa4LZl?usp=sharing)
 
 ---
