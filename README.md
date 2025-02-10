@@ -27,7 +27,7 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 #### 📝 **Evidencias:**  
 | Integrante | Evaluación Cisco |
 |--------------|-----------------|
-| **Castañon Sánche Monserrat Guadalupe** |  |
+| **Castañon Sánche Monserrat Guadalupe** | ![Foto Cisco](https://github.com/user-attachments/assets/0a67a52e-a130-4a27-b983-57838bee2545)|
 | **Delgado Manzano Carmen Catalina** |  |
 
 ---
