@@ -37,30 +37,29 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 #### 💾 *Ejercicio 1: Almacenamiento de Datos*
 📌 Diseñar un sistema IoT que capture datos desde un sensor y los almacene en PostgreSQL mediante Node-RED.  
 
-## Video demostrativo  
-url del archivo .json 
+#### Codigo Documentado .py
 
-Codigo Documentado
+[🔗 Código de Thonny](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/C%C3%B3gido%20de%20Thonny.py) 
 
-📎 [🔗 Código de Thonny](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/C%C3%B3gido%20de%20Thonny.py) 
+#### Archivo .json
 
-📎 [🔗 Enlace de Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json )
+[🔗 Enlace de Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json )
 
 ---
 
 #### ⚙️ *Ejercicio 2: Control de Actuadores*
 📌 Diseñar un sistema IoT que controle un actuador basado en la lectura de un sensor o entrada.  
-📎 [🔗 Enlace al Ejercicio](https://drive.google.com/drive/folders/1XJG1QhBlhkNqQYG5Fs0tHn1vsYfZzA_2?usp=sharing)
+📎 [🔗 Enlace al Ejercicio](enlace del video)
 
 ---
 
 #### 🎥 **Videos Demostrativos (Individual)**
 1. CRUD en PostgreSQL con Node-RED o Python (2.5 puntos)
 [CRUD de Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json)
-3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)  
+3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)  TENGO DUDA
 4. Control de LED y Botón en Raspberry Pi (2.5 puntos)
 [🎥 Video demostrativo](https://drive.google.com/file/d/1pj94mMCNZgYiWjhxJjdGmIEt50mw10tG/view?usp=drive_link)
-6. Conexión MQTT en Node-RED con Mosquitto (2.5 puntos)  
+6. Conexión MQTT en Node-RED con Mosquitto (2.5 puntos)   TENGO DUDA
 
 ✅ **Evidencias:**  
 | Integrante | Evaluación Cisco |
