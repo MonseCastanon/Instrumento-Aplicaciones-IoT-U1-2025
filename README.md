@@ -81,7 +81,7 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 1. CRUD en PostgreSQL con Node-RED o Python (2.5 puntos)
 [CRUD de Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json)
 3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)
-   [🎥 Configuración básica en Raspberry]()
+   [🎥 Configuración básica en Raspberry](https://drive.google.com/file/d/12nUffPDdJGQOHZv-xRnxa8xm1AZ6BsnX/view?usp=drivesdk)
 5. Control de LED y Botón en Raspberry Pi (2.5 puntos)
 [🎥 Video demostrativo 1](https://drive.google.com/file/d/19cD7sVbo5aA9ulnaKTrxXu24LeWurQR5/view?usp=drivesdk)
 [🎥 Video demostrativo 2](https://drive.google.com/file/d/19cD7sVbo5aA9ulnaKTrxXu24LeWurQR5/view?usp=drivesdk)
