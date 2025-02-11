@@ -28,7 +28,8 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 | Integrante | Evaluación Cisco |
 |--------------|-----------------|
 | **Castañon Sánche Monserrat Guadalupe** | ![Foto Cisco](https://github.com/user-attachments/assets/0a67a52e-a130-4a27-b983-57838bee2545)|
-| **Delgado Manzano Carmen Catalina** |  |
+| **Delgado Manzano Carmen Catalina** |![Foto Cisco](https://github.com/user-attachments/assets/ca225628-7e94-430a-ac49-9478e587850a)
+|
 
 ---
 
@@ -77,8 +78,9 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 ✅ **Evidencias:**  
 | Integrante | Componente | Imagen |
 |--------------|--------------|--------|
-| **Monserrat Guadalupe Castañon Sánchez** | Placa Fenólica | <img src="https://github.com/user-attachments/assets/ec6b9e9a-03b5-4001-af4c-5e5eeb8fce43" width="100"> |
-| **Delgado Manzano Carmen Catalina** | Placa Fenólica | ... |
+| **Monserrat Guadalupe Castañon Sánchez** | Placa Fenólica | <img src="https://github.com/user-attachments/assets/ec6b9e9a-03b5-4001-af4c-5e5eeb8fce43" width="400"> |
+| **Delgado Manzano Carmen Catalina** | Placa Fenólica | ![Imagen de WhatsApp 2025-02-11 a las 00 26 41_1f678ad7](https://github.com/user-attachments/assets/2e1541ee-45ab-4b20-b8f9-2567b118f9fd)
+ |
 
 ---
 
@@ -88,8 +90,9 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 ✅ **Evidencias:**  
 | Integrante | Figura | Imagen |
 |--------------|--------|--------|
-| **Monserrat Guadalupe Castañon Sánchez** | Bailarina | <img src="https://github.com/user-attachments/assets/e1276cc8-70cc-48e5-b6c0-a93527710d70" width="100"> |
-| **Delgado Manzano Carmen Catalina** | ... | ... |
+| **Monserrat Guadalupe Castañon Sánchez** | Bailarina | <img src="https://github.com/user-attachments/assets/e1276cc8-70cc-48e5-b6c0-a93527710d70" width="600"> |
+| **Delgado Manzano Carmen Catalina** | Dinosaurio | ![Imagen de WhatsApp 2025-02-11 a las 00 26 42_b8dc42ca](https://github.com/user-attachments/assets/4004db0f-a0a3-4798-99d5-e0f7fca82af9)
+ |
 
 ---
 
