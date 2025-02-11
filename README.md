@@ -48,7 +48,7 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 
 
 #### 🎬 Video demostrativo 
-[🎥 Video demostrativo](https://drive.google.com/file/d/1pj94mMCNZgYiWjhxJjdGmIEt50mw10tG/view?usp=drive_link)------cambiarlo....
+[🎥 Video demostrativo](https://drive.google.com/file/d/19xgxG8goQtZG63N5a4x-M57TWryoPsn9/view?usp=drivesdk)
 
 ---
 
@@ -80,7 +80,7 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 
 **Delgado Manzano Carmen Catalina** ----te falta
 1. CRUD en PostgreSQL con Node-RED o Python (2.5 puntos)
-[CRUD de Postgre (https://drive.google.com/file/d/1Pky3kCIdpyOZseXc3sFvwEnz_FIuqGgh/view?usp=drivesdk)
+[CRUD de Postgre](https://drive.google.com/file/d/1Pky3kCIdpyOZseXc3sFvwEnz_FIuqGgh/view?usp=drivesdk)
 3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)
    [🎥 Configuración básica en Raspberry](https://drive.google.com/file/d/12nUffPDdJGQOHZv-xRnxa8xm1AZ6BsnX/view?usp=drivesdk)
 5. Control de LED y Botón en Raspberry Pi (2.5 puntos)
@@ -88,8 +88,6 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 [🎥 Video demostrativo 2](https://drive.google.com/file/d/12eZxcLNiJpu10Rw6F_r6NEBciFdvPYMt/view?usp=drivesdk)
 6. Conexión MQTT en Node-RED con Mosquitto (2.5 puntos)
 [🎥 Video demostrativo mosquito](https://drive.google.com/file/d/1R-qFvmlJMVrQP6oNcB1gHb1qmbiQ7QdW/view?usp=drive_link)
-
-
 
 
 
