@@ -1,113 +1,86 @@
-## Código de Thonny
-
-from machine import Pin
 import network
-from time import sleep
-from hcsr04 import HCSR04
 from umqtt.simple import MQTTClient
+from machine import Pin, time_pulse_us
+import time
 
-# Configuración de MQTT
-MQTT_BROKER = "192.168.188.212"
+# Configuración WiFi
+WIFI_SSID = "Ubee9779-2.4G"
+WIFI_PASSWORD ="A266879779"
+
+# Configuración MQTT
+MQTT_BROKER = "192.168.0.23"
+MQTT_USER = ""
+MQTT_PASSWORD = ""
+MQTT_CLIENT_ID = ""
 MQTT_PORT = 1883
-MQTT_CLIENT_ID = "esp32_sensor_client"  # Asegúrate de usar un ID único para el cliente
-MQTT_USER = ""  # Si no tienes usuario, déjalo vacío
-MQTT_PASSWORD = ""  # Si no tienes contraseña, déjalo vacío
-MQTT_TOPIC_PUB = "mgcs/sensor"  # Topic para publicar la distancia
+MQTT_TOPIC_PUB= "mc/ejercicio1"
 
-# Configuración del sensor y los LED
-sensor = HCSR04(15, 4)
-ledr = Pin(18, Pin.OUT)
-ledg = Pin(21, Pin.OUT)
-ledy = Pin(19, Pin.OUT)
+# Configuración del sensor ultrasónico
+TRIG_PIN = 15
+ECHO_PIN = 4
+
+trig = Pin(TRIG_PIN, Pin.OUT)
+echo = Pin(ECHO_PIN, Pin.IN)
+
 
 # Función para conectar a WiFi
 def conectar_wifi():
     print("Conectando a WiFi...", end="")
     sta_if = network.WLAN(network.STA_IF)
-    if not sta_if.isconnected():
-        sta_if.active(True)
-        sta_if.connect('RaspBerry 7', 'linux4321')
-        while not sta_if.isconnected():
-            print(".", end="")
-            sleep(0.5)
-    print("\nWiFi Conectada! IP:", sta_if.ifconfig()[0])
+    sta_if.active(True)
+    sta_if.connect(WIFI_SSID, WIFI_PASSWORD)
+    
+    # Intentar conectar por 10 segundos
+    start_time = time.time()
+    while not sta_if.isconnected():
+        if time.time() - start_time > 10:  # Límite de 10 segundos
+            print("\nError al conectar a WiFi: Tiempo de espera agotado")
+            return False
+        print(".", end="")
+        time.sleep(0.3)
+    
+    print("\nWiFi Conectada!")
+    return True
 
-# Función para subscribirse al broker MQTT
-def subscribir():
-    try:
-        client = MQTTClient(MQTT_CLIENT_ID, MQTT_BROKER, port=MQTT_PORT,
-                             user=MQTT_USER, password=MQTT_PASSWORD, keepalive=30)
-        client.set_callback(llegada_mensaje)
-        client.connect()
-        client.subscribe(MQTT_TOPIC_PUB)  # Suscripción al topic
-        print("Conectado a %s, en el tópico %s" % (MQTT_BROKER, MQTT_TOPIC_PUB))
-        return client
-    except Exception as e:
-        print("Error conectando al broker MQTT:", e)
-        return None
 
-# Función que maneja los mensajes recibidos en el topic
-def llegada_mensaje(topic, msg):
-    print("Mensaje recibido:", msg)
-    if msg == b'true':
-        ledr.value(1)
-    elif msg == b'false':
-        ledr.value(0)
+# Función para conectar al broker MQTT
+def conectar_broker():
+    client = MQTTClient(MQTT_CLIENT_ID, MQTT_BROKER, port=MQTT_PORT, user=MQTT_USER, password=MQTT_PASSWORD)
+    client.connect()
+    print(f"Conectado a MQTT Broker: {MQTT_BROKER}, Topic: {MQTT_TOPIC_PUB}")  # Cambié MQTT_TOPIC por MQTT_TOPIC_PUB
+    return client
 
-# Función para reconectar al broker MQTT
-def reconectar_mqtt():
-    global client
-    print("Intentando reconectar a MQTT...")
-    while client is None:  # Mientras no esté conectado
-        client = subscribir()  # Intentar la conexión nuevamente
-        sleep(5)  # Esperar 5 segundos antes de volver a intentar
 
-# Conectar a WiFi
+# Función para medir distancia con HC-SR04
+def medir_distancia():
+    trig.off()
+    time.sleep_us(2)
+    trig.on()
+    time.sleep_us(10)
+    trig.off()
+
+    duracion = time_pulse_us(echo, 1, 30000)  # Máximo 30 ms de espera
+    if duracion < 0:
+        return -1  # Error en la medición
+    
+    distancia = (duracion * 0.0343) / 2  # Convertir a cm
+    return distancia
+
+# Conectar a WiFi y MQTT
 conectar_wifi()
+client = conectar_broker()
 
-# Conectar al broker MQTT
-client = subscribir()
+distancia_anterior = -1  # Inicializamos con un valor inválido
 
-# Variable para la distancia anterior
-distancia_anterior = 0
-
-# Ciclo principal
+# Bucle principal
 while True:
-    try:
-        if client is not None:
-            client.check_msg()  # Verificar si hay mensajes nuevos
-        else:
-            reconectar_mqtt()  # Intentar reconectar si client es None
+    distancia = medir_distancia()
+    print(f"Distancia: {distancia} cm")
 
-        # Obtener la distancia del sensor
-        distancia = int(sensor.distance_cm())
-        print(f"Distancia del objeto: {distancia} cm.")
 
-        if client:
-            # Publicar solo si el cliente MQTT está conectado
-            if distancia > 200:
-                print("Lejos")
-                client.publish(MQTT_TOPIC_PUB, str(distancia))  # Publicar la distancia
-                ledr.on()
-                ledy.off()
-                ledg.off()
-            elif distancia > 100:
-                print("No tan cerca")
-                client.publish(MQTT_TOPIC_PUB, str(distancia))  # Publicar la distancia
-                ledr.off()
-                ledy.on()
-                ledg.off()
-            elif distancia > 0:
-                print("Muy cerca")
-                client.publish(MQTT_TOPIC_PUB, str(distancia))  # Publicar la distancia
-                ledr.off()
-                ledy.off()
-                ledg.on()
-        else:
-            print("Cliente MQTT no disponible, no se puede publicar.")
+    # Publicar la distancia en MQTT solo si cambia
+    if distancia != distancia_anterior:
+        client.publish(MQTT_TOPIC_PUB, str(distancia))
+        distancia_anterior = distancia  # Actualizar la distancia anterior
 
-        sleep(1)  # Esperar 1 segundo antes de la siguiente medición
-
-    except OSError as e:
-        print("Error detectado:", e)
-        reconectar_mqtt()  # Intentar reconectar si ocurre un error
+    time.sleep(2)  # Esperar 2 segundos antes de la siguiente medición
