@@ -44,13 +44,17 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 
 #### Archivo .json
 
-[🔗 Diagrama de conexión](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/Diagrama de conexión..json )
+[🔗 Diagrama de conexión](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/Diagrama%20de%20conexi%C3%B3n.json )
 
 ---
 
 #### ⚙️ *Ejercicio 2: Control de Actuadores*
 📌 Diseñar un sistema IoT que controle un actuador basado en la lectura de un sensor o entrada.  
-📎 [🔗 Enlace al Ejercicio](enlace del video)
+[🔗 Código de Thonny](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/Ejercicio2.py) 
+
+#### Archivo .json
+
+[🔗 Diagrama de conexión](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/Ejercicio2.json )
 
 ---
 
