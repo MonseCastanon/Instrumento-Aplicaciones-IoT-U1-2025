@@ -1,0 +1,117 @@
+[
+    {
+        "id": "9dcdf2456c8e8c34",
+        "type": "tab",
+        "label": "Ejercicio1Basberry",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c2f9f898ab084503",
+        "type": "mqtt in",
+        "z": "9dcdf2456c8e8c34",
+        "name": "Recibir Datos del Sensor",
+        "topic": "mc/ejercicio2",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "e4786a177db30be0"
+            ]
+        ]
+    },
+    {
+        "id": "e4786a177db30be0",
+        "type": "function",
+        "z": "9dcdf2456c8e8c34",
+        "name": "Procesar Datos",
+        "func": "var payload = msg.payload.split(',');  \nvar temperatura = parseFloat(payload[0]);  \nvar humedad = parseFloat(payload[1]);  \n\nmsg.payload = {  \n    temperatura: temperatura,  \n    humedad: humedad  \n};  \nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 220,
+        "wires": [
+            [
+                "91815fe2716d0849"
+            ]
+        ]
+    },
+    {
+        "id": "91815fe2716d0849",
+        "type": "ui_text",
+        "z": "9dcdf2456c8e8c34",
+        "group": "dashboard_group",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Mostrar Datos",
+        "label": "Temperatura",
+        "format": "{{msg.payload.temperatura}}°C, Humedad: {{msg.payload.humedad}}%",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 640,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "mqtt_broker",
+        "type": "mqtt-broker",
+        "name": "MQTT Broker",
+        "broker": "192.168.0.28",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "dashboard_group",
+        "type": "ui_group",
+        "name": "Sensor",
+        "tab": "dashboard_tab",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dashboard_tab",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "order": 1
+    }
+]
