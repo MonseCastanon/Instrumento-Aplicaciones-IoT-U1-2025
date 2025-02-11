@@ -64,7 +64,6 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 
 [🎥 Video demostrativo](https://drive.google.com/file/d/1wz2Iqzq1RFtZPIcm6I3HGGLrNSPUX6Za/view?usp=drivesdk)
 
-[🎥 Video demostrativo](https://drive.google.com/file/d/1D_LbTFF860QiYcRoS5EEsWSezZV_8eij/view?usp=drivesdk)
 
 ## 🎥 **Videos Demostrativos (Individual)**
 
@@ -75,7 +74,9 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)  TENGO DUDA
 4. Control de LED y Botón en Raspberry Pi (2.5 puntos)
 [🎥 Video demostrativo](https://drive.google.com/file/d/1pj94mMCNZgYiWjhxJjdGmIEt50mw10tG/view?usp=drive_link)
+[Video demostrativo 2](https://drive.google.com/file/d/12bqs-oRb2sOWAPPIX1cXfAeI0yVAvw_O/view?usp=drivesdk)
 6. Conexión MQTT en Node-RED con Mosquitto (2.5 puntos)   TENGO DUDA
+
 
 
 **Delgado Manzano Carmen Catalina** ----te falta
