@@ -70,7 +70,7 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 
   **Monserrat Guadalupe Castañon Sanchez**
 1. CRUD en PostgreSQL con Node-RED o Python (2.5 puntos)
-[CRUD de Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json)
+[CRUD de Postgre]()
 3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)  TENGO DUDA
 4. Control de LED y Botón en Raspberry Pi (2.5 puntos)
 [🎥 Video demostrativo](https://drive.google.com/file/d/1pj94mMCNZgYiWjhxJjdGmIEt50mw10tG/view?usp=drive_link)
@@ -80,10 +80,16 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 **Delgado Manzano Carmen Catalina** ----te falta
 1. CRUD en PostgreSQL con Node-RED o Python (2.5 puntos)
 [CRUD de Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json)
-3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)  TENGO DUDA
-4. Control de LED y Botón en Raspberry Pi (2.5 puntos)
-[🎥 Video demostrativo](https://drive.google.com/file/d/1pj94mMCNZgYiWjhxJjdGmIEt50mw10tG/view?usp=drive_link)
-6. Conexión MQTT en Node-RED con Mosquitto (2.5 puntos)   TENGO DUDA
+3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)
+   [🎥 Configuración básica en Raspberry]()
+5. Control de LED y Botón en Raspberry Pi (2.5 puntos)
+[🎥 Video demostrativo 1](https://drive.google.com/file/d/19cD7sVbo5aA9ulnaKTrxXu24LeWurQR5/view?usp=drivesdk)
+[🎥 Video demostrativo 2](https://drive.google.com/file/d/19cD7sVbo5aA9ulnaKTrxXu24LeWurQR5/view?usp=drivesdk)
+6. Conexión MQTT en Node-RED con Mosquitto (2.5 puntos)
+[🎥 Video demostrativo mosquito](https://drive.google.com/file/d/1R-qFvmlJMVrQP6oNcB1gHb1qmbiQ7QdW/view?usp=drive_link)
+
+
+
 
 
 
@@ -91,7 +97,7 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 | Integrante | Evaluación Cisco |
 |-------------|------------------|
 | **Monserrat Guadalupe Castañon Sánchez** | [📁 Drive](https://drive.google.com/drive/folders/1rikuzTonF8nlRl7e7wIamOKiwZRx4-VM?usp=sharing) |
-| **Delgado Manzano Carmen Catalina** | [📁 Drive](aquí el link de la carpeta) |
+| **Delgado Manzano Carmen Catalina** | [📁 Drive](https://drive.google.com/drive/folders/12bWOe4G2WFv9U36bZ7oM723QGVH_OywK)|
 
 ---
 
