@@ -40,11 +40,11 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 
 #### Codigo Documentado .py
 
-[🔗 Código de Thonny](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/C%C3%B3gido%20de%20Thonny.py) 
+[🔗 Código de Thonny](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/C%C3%B3gido%20de%20ThonnyEjercicio1.py) 
 
 #### Archivo .json
 
-[🔗 Enlace de Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json )
+[🔗 Diagrama de conexión](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/Diagrama de conexión..json )
 
 ---
 
