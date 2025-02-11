@@ -84,7 +84,7 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
    [🎥 Configuración básica en Raspberry](https://drive.google.com/file/d/12nUffPDdJGQOHZv-xRnxa8xm1AZ6BsnX/view?usp=drivesdk)
 5. Control de LED y Botón en Raspberry Pi (2.5 puntos)
 [🎥 Video demostrativo 1](https://drive.google.com/file/d/19cD7sVbo5aA9ulnaKTrxXu24LeWurQR5/view?usp=drivesdk)
-[🎥 Video demostrativo 2](https://drive.google.com/file/d/19cD7sVbo5aA9ulnaKTrxXu24LeWurQR5/view?usp=drivesdk)
+[🎥 Video demostrativo 2](https://drive.google.com/file/d/12eZxcLNiJpu10Rw6F_r6NEBciFdvPYMt/view?usp=drivesdk)
 6. Conexión MQTT en Node-RED con Mosquitto (2.5 puntos)
 [🎥 Video demostrativo mosquito](https://drive.google.com/file/d/1R-qFvmlJMVrQP6oNcB1gHb1qmbiQ7QdW/view?usp=drive_link)
 
