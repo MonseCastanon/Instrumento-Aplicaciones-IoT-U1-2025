@@ -33,9 +33,9 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 
 ---
 
-### 🛠 **Parte Práctica Pareja**
+## 🛠 **Parte Práctica Pareja**
 
-#### 💾 *Ejercicio 1: Almacenamiento de Datos*
+### 💾 *Ejercicio 1: Almacenamiento de Datos*
 📌 Diseñar un sistema IoT que capture datos desde un sensor y los almacene en PostgreSQL mediante Node-RED.  
 
 #### Codigo Documentado .py
@@ -46,19 +46,29 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 
 [🔗 Diagrama de conexión](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/Diagrama%20de%20conexi%C3%B3n.json )
 
+
+#### 🎬 Video demostrativo 
+[🎥 Video demostrativo](https://drive.google.com/file/d/1pj94mMCNZgYiWjhxJjdGmIEt50mw10tG/view?usp=drive_link)------cambiarlo....
+
 ---
 
-#### ⚙️ *Ejercicio 2: Control de Actuadores*
+### ⚙️ *Ejercicio 2: Control de Actuadores*
 📌 Diseñar un sistema IoT que controle un actuador basado en la lectura de un sensor o entrada.  
 [🔗 Código de Thonny](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/Ejercicio2.py) 
 
 #### Archivo .json
 
-[🔗 Diagrama de conexión](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/Ejercicio2.json )
+[🔗 Diagrama de conexión](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/Ejericicio2.json )
+
+#### 🎬 Video demostrativo 
+
+[🎥 Video demostrativo](https://drive.google.com/file/d/1pj94mMCNZgYiWjhxJjdGmIEt50mw10tG/view?usp=drive_link)------cambiarlo....
 
 ---
+## 🎥 **Videos Demostrativos (Individual)**
 
-#### 🎥 **Videos Demostrativos (Individual)**
+
+  **Monserrat Guadalupe Castañon Sanchez**
 1. CRUD en PostgreSQL con Node-RED o Python (2.5 puntos)
 [CRUD de Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json)
 3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)  TENGO DUDA
@@ -66,7 +76,18 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 [🎥 Video demostrativo](https://drive.google.com/file/d/1pj94mMCNZgYiWjhxJjdGmIEt50mw10tG/view?usp=drive_link)
 6. Conexión MQTT en Node-RED con Mosquitto (2.5 puntos)   TENGO DUDA
 
-✅ **Evidencias:**  
+
+**Delgado Manzano Carmen Catalina** ----te falta
+1. CRUD en PostgreSQL con Node-RED o Python (2.5 puntos)
+[CRUD de Postgre](https://github.com/MonseCastanon/Instrumento-Aplicaciones-IoT-U1-2025/blob/main/flow%20Postgresql.json)
+3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)  TENGO DUDA
+4. Control de LED y Botón en Raspberry Pi (2.5 puntos)
+[🎥 Video demostrativo](https://drive.google.com/file/d/1pj94mMCNZgYiWjhxJjdGmIEt50mw10tG/view?usp=drive_link)
+6. Conexión MQTT en Node-RED con Mosquitto (2.5 puntos)   TENGO DUDA
+
+
+
+✅ **Evidencias (Todos los videos de los ejercicios mencionados anteriormente):**  
 | Integrante | Evaluación Cisco |
 |-------------|------------------|
 | **Monserrat Guadalupe Castañon Sánchez** | [📁 Drive](https://drive.google.com/drive/folders/1rikuzTonF8nlRl7e7wIamOKiwZRx4-VM?usp=sharing) |
