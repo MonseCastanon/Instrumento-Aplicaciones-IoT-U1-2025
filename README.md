@@ -70,12 +70,13 @@ Este repositorio contiene la documentación y el código de los ejercicios asign
 
   **Monserrat Guadalupe Castañon Sanchez**
 1. CRUD en PostgreSQL con Node-RED o Python (2.5 puntos)
-[CRUD de Postgre]()
-3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)  TENGO DUDA
+[CRUD de Postgre](https://drive.google.com/file/d/1u5dhh8DAJv5geor9BlBIvMQ8Ex1WSS_L/view?usp=sharing)
+3. Instalaciones y Configuraciones Básicas en Raspberry Pi (2.5 puntos)
 4. Control de LED y Botón en Raspberry Pi (2.5 puntos)
 [🎥 Video demostrativo](https://drive.google.com/file/d/1pj94mMCNZgYiWjhxJjdGmIEt50mw10tG/view?usp=drive_link)
-[Video demostrativo 2](https://drive.google.com/file/d/12bqs-oRb2sOWAPPIX1cXfAeI0yVAvw_O/view?usp=drivesdk)
-6. Conexión MQTT en Node-RED con Mosquitto (2.5 puntos)   TENGO DUDA
+[🎥 Video demostrativo 2](https://drive.google.com/file/d/12bqs-oRb2sOWAPPIX1cXfAeI0yVAvw_O/view?usp=drivesdk)
+6. Conexión MQTT en Node-RED con Mosquitto (2.5 puntos)
+[🎥 Video demostrativo](https://drive.google.com/file/d/1KVrCs7kDMJTlqs7E6q7aTIhKmEtbQCaV/view?usp=sharing)
 
 
 
